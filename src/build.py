@@ -22,7 +22,7 @@ h = h.replace('/*{{ENGINE_JS}}*/', (R / 'engine/scrollcraft.js').read_text(encod
 # Wrap in a full document so link previews (LinkedIn, WhatsApp) can read the <head> tags.
 import re
 m = re.search(r'\n<(canvas|div) ', h)
-h = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n' + h[:m.start()]
+h = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' + h[:m.start()]
      + '\n</head>\n<body>' + h[m.start():] + '\n</body>\n</html>\n')
 (R.parent / 'index.html').write_text(h, encoding='utf-8')
 print('index.html', len(h) // 1024, 'KB, placeholders left:', h.count('{{'))
