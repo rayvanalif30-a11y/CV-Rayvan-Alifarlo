@@ -141,6 +141,11 @@ code { font: 500 .92em ui-monospace, Consolas, monospace; }
 .seal text { font: 700 11.5px var(--sc-font-text); letter-spacing: .19em; fill: currentColor; }
 .cert h3 { font-size: 28px; margin-top: 4px; }
 .cert p { color: var(--muted); max-width: 60ch; margin-top: 6px; }
+.train { margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--hair); display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 28px; align-items: start; }
+.train .td { font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; padding-top: 6px; }
+.train h3 { font-size: 24px; margin-top: 4px; }
+.train p { color: var(--muted); max-width: 60ch; margin-top: 6px; }
+.train a { color: var(--pink-ink); font-weight: 600; text-underline-offset: 3px; }
 .colophon { margin-top: 30px; font-size: 12px; color: var(--muted); letter-spacing: .04em; }
 
 /* the back of the sheet */
@@ -236,6 +241,8 @@ html:not(.cine) .stage { position: static !important; height: auto !important; o
   .cert { grid-template-columns: 76px minmax(0, 1fr); gap: 16px; }
   .seal { width: 76px; height: 76px; }
   .cert h3 { font-size: 23px; }
+  .train { grid-template-columns: 76px minmax(0, 1fr); gap: 16px; }
+  .train h3 { font-size: 20px; }
   .back { padding: 36px var(--pad); gap: 16px; }
   .back h2 { font-size: clamp(52px, 17vw, 84px); }
   .back p { font-size: 16px; }
@@ -400,6 +407,14 @@ html:not(.cine) .stage { position: static !important; height: auto !important; o
                   <span class="kicker">Certification</span>
                   <h3>Copyright registration, Trans Tuc-Tuc</h3>
                   <p>Recorded as a Computer Program work with DJKI, Indonesia's intellectual property office, under Registration No. 001336376. The copyright holder is Universitas Telkom.</p>
+                </div>
+              </div>
+              <div class="train">
+                <span class="td">Jul 2026</span>
+                <div>
+                  <span class="kicker">Training</span>
+                  <h3>Workshop Cyber Security, Dunia Coding</h3>
+                  <p>Four hours on website security essentials and writing a security report for a portfolio, with AI as an assistant. <a href="https://duniacoding.id/certificate/E-WO110-0016" rel="noopener" target="_blank">Credential E-WO110-0016</a></p>
                 </div>
               </div>
               <p class="colophon">Set in Libre Bodoni and Public Sans. The other side of this sheet has the contact details.</p>
