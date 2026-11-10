@@ -1,0 +1,595 @@
+<title>Rayvan Mahesworo CV</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Curriculum vitae of Rayvan Alifarlo Mahesworo, Information Technology undergraduate at Telkom University.">
+<style>/*{{FONTS}}*/</style>
+<style>/*{{ENGINE_CSS}}*/</style>
+<style>
+/* One object: a real paper CV floating in a dark studio. Scrolling takes it apart into
+   five sheets, flies the camera through each, puts it back together, then turns it over.
+   Palette and type from ui-ux-pro-max: Editorial Grid / Magazine style, "editorial black
+   + accent pink" palette, "Magazine Style" pairing (Libre Bodoni + Public Sans). */
+:root {
+  --space: #09090b;
+  --ink: #18181b;
+  --paper: #fafafa;
+  --muted: #52525b;
+  --hair: rgba(24, 24, 27, .16);
+  --pink: #ec4899;
+  --pink-ink: #be185d;
+  --on-space: #fafafa;
+  --on-space-soft: #a1a1aa;
+
+  --sc-canvas: var(--space);
+  --sc-surface: var(--space);
+  --sc-ink: var(--on-space);
+  --sc-ink-soft: var(--on-space-soft);
+  --sc-accent: var(--pink);
+  --sc-accent-ink: #09090b;
+  --sc-font-display: "Libre Bodoni Variable", "Bodoni 72", Didot, Georgia, serif;
+  --sc-font-text: "Public Sans Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --disp: var(--sc-font-display);
+  --gut: max(16px, env(safe-area-inset-left, 0px));
+  --gutr: max(16px, env(safe-area-inset-right, 0px));
+  --W: min(1120px, calc(100vw - 32px));
+  color-scheme: dark;
+}
+html, body { background: var(--space); }
+body { color: var(--on-space); font-family: var(--sc-font-text); font-size: 16px; line-height: 1.55; }
+:focus-visible { outline: 2px solid var(--pink); outline-offset: 3px; }
+p { margin: 0; }
+
+/* ---------- studio ---------- */
+#light { position: fixed; inset: 0; z-index: 0; pointer-events: none; background:
+  radial-gradient(60vmax 46vmax at var(--lx, 72%) var(--ly, 38%), rgba(236, 72, 153, .2), transparent 62%),
+  radial-gradient(70vmax 60vmax at 12% 110%, rgba(250, 250, 250, .07), transparent 60%); }
+#dust { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; z-index: 0; pointer-events: none; }
+html:not(.cine) #dust { display: none; }
+
+.bar { position: fixed; inset: 0 0 auto; z-index: 9; display: flex; align-items: center; gap: 12px; padding: calc(env(safe-area-inset-top, 0px) + 10px) var(--gutr) 10px var(--gut); font-size: .8125rem; }
+.bar::before { content: ""; position: absolute; inset: 0 0 -16px; z-index: -1; background: linear-gradient(var(--space) 45%, transparent); pointer-events: none; }
+.bar b { font-family: var(--disp); font-weight: 500; font-size: 1.0625rem; letter-spacing: .01em; }
+#where { flex: 1; min-width: 0; text-align: center; color: var(--on-space-soft); letter-spacing: .14em; text-transform: uppercase; font-size: .6875rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pill { min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid rgba(250, 250, 250, .28); background: none; color: var(--on-space); font: 500 .8125rem var(--sc-font-text); cursor: pointer; display: inline-flex; align-items: center; text-decoration: none; white-space: nowrap; transition: background-color .18s, color .18s, border-color .18s; }
+.pill:hover { background: var(--on-space); color: var(--space); border-color: var(--on-space); }
+.pill.hot { background: var(--pink); border-color: var(--pink); color: #09090b; font-weight: 600; }
+.pill.hot:hover { background: #f472b6; border-color: #f472b6; color: #09090b; }
+html:not(.js) #mode { display: none; }
+
+/* ---------- the paper ---------- */
+#act { position: relative; z-index: 1; padding: 84px var(--gutr) 64px var(--gut); }
+.sheet { position: relative; width: var(--W); margin: 0 auto; color: var(--ink); --pad: 56px; }
+.ply { position: relative; padding: 44px var(--pad); background-color: var(--paper); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.ply + .ply { border-top: 1px dashed var(--hair); }
+.ply a { color: inherit; text-decoration-color: var(--pink); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.ply a:hover { color: var(--pink-ink); }
+.tag { display: none; }
+
+.kicker { font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+.cols { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 0 32px; }
+.cols > .kicker { padding-top: 6px; }
+h1, h2, h3 { margin: 0; font-family: var(--disp); font-weight: 500; letter-spacing: -.01em; text-wrap: balance; }
+
+/* identity */
+#p-id { padding-top: 40px; padding-bottom: 0; min-height: 430px; display: grid; grid-template-columns: minmax(0, 1fr) 190px; gap: 0 24px; transform-style: preserve-3d; }
+.mast { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 16px; padding-bottom: 14px; border-bottom: 2px solid var(--ink); }
+.id-main { padding: 34px 0 40px; display: grid; gap: 22px; align-content: start; }
+.id-main h1 { font-size: 104px; line-height: .9; letter-spacing: -.025em; }
+.id-main h1 i { font-style: italic; font-weight: 400; color: var(--pink-ink); }
+.role { font-size: 19px; max-width: 34ch; }
+.reach { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 15px; font-weight: 500; }
+.reach li { overflow-wrap: anywhere; }
+.slot { position: relative; align-self: end; height: 100%; transform-style: preserve-3d; }
+.stand { position: absolute; left: 50%; bottom: 0; width: 150px; height: auto; max-width: none; margin-left: -75px; transform-origin: 50% 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .28)); will-change: transform; }
+
+/* profile */
+.lede { font-family: var(--disp); font-size: 34px; line-height: 1.14; font-weight: 400; letter-spacing: -.012em; }
+.lede em { font-style: italic; color: var(--pink-ink); }
+.prof { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 20px 48px; }
+.prof .body { color: var(--muted); max-width: 52ch; }
+.edu { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; align-content: start; }
+.edu li { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 14px; align-items: center; }
+.edu b { display: block; font-weight: 600; line-height: 1.25; }
+.edu span { font-size: 14px; color: var(--muted); display: block; }
+
+/* stamps */
+.stamp { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; overflow: hidden; transform: rotate(var(--r, -6deg)); box-shadow: 0 1px 0 rgba(0, 0, 0, .25), 0 3px 8px rgba(0, 0, 0, .16); flex: none; }
+.stamp img { width: 100%; height: 100%; display: block; }
+.stamp.inkst { box-shadow: none; border: 2px solid var(--pink-ink); color: var(--pink-ink); font: 700 9px/1.05 var(--sc-font-text); letter-spacing: .08em; text-transform: uppercase; text-align: center; outline: 1px solid var(--pink-ink); outline-offset: -6px; }
+
+/* experience */
+.xl { position: relative; list-style: none; margin: 0; padding: 0; }
+.xl::before { content: ""; position: absolute; left: 148px; top: 6px; bottom: 6px; width: 2px; background: var(--pink); transform-origin: 50% 0; }
+.x { display: grid; grid-template-columns: 124px minmax(0, 1fr) 52px; gap: 4px 48px; padding: 0 0 26px; }
+.x:last-child { padding-bottom: 0; }
+.when { font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 5px; text-align: right; }
+.x h3 { font-size: 25px; line-height: 1.12; }
+.org { font-size: 14px; font-weight: 600; letter-spacing: .02em; margin-top: 3px; }
+.x ul { margin: 8px 0 0; padding: 0 0 0 16px; color: var(--muted); display: grid; gap: 2px; max-width: 62ch; }
+.now { display: inline-block; font: 700 10px var(--sc-font-text); letter-spacing: .14em; text-transform: uppercase; color: #fff; background: var(--pink-ink); padding: 3px 7px; margin-left: 10px; vertical-align: 5px; }
+.fig8 { font-family: var(--disp); font-size: 64px; line-height: .9; letter-spacing: -.03em; color: var(--pink-ink); float: right; margin: 2px 0 0 18px; font-variant-numeric: lining-nums; }
+
+/* projects */
+.pj { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 48px; }
+.p h3 { font-size: 30px; line-height: 1.05; }
+.p .meta { font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--pink-ink); margin-top: 6px; }
+.p p { margin-top: 10px; }
+.p ul { margin: 10px 0 0; padding-left: 16px; color: var(--muted); display: grid; gap: 3px; }
+.p.s { border-top: 1px solid var(--hair); padding-top: 22px; }
+.p.s h3 { font-size: 24px; }
+.lat { margin-top: 14px; display: grid; gap: 7px; }
+.lat div { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 12px; align-items: center; font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.lat i { display: block; height: 14px; width: var(--w); background: var(--ink); transform-origin: 0 50%; }
+.lat div:last-of-type i { background: var(--pink); }
+.lat small { font-size: 12px; color: var(--muted); font-weight: 400; }
+code { font: 500 .92em ui-monospace, Consolas, monospace; }
+
+/* skills + certification */
+.sk { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 40px; }
+.sk p { margin-top: 6px; font-family: var(--disp); font-size: 21px; line-height: 1.25; }
+.cert { margin-top: 36px; padding-top: 28px; border-top: 2px solid var(--ink); display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 28px; align-items: center; }
+.seal { width: 112px; height: 112px; color: var(--pink-ink); transform: rotate(-12deg); }
+.seal text { font: 700 11.5px var(--sc-font-text); letter-spacing: .19em; fill: currentColor; }
+.cert h3 { font-size: 28px; margin-top: 4px; }
+.cert p { color: var(--muted); max-width: 60ch; margin-top: 6px; }
+.colophon { margin-top: 30px; font-size: 12px; color: var(--muted); letter-spacing: .04em; }
+
+/* the back of the sheet */
+.back { margin-top: 28px; background: var(--ink); color: var(--on-space); padding: 56px var(--pad); display: grid; gap: 22px; align-content: start; }
+.back h2 { font-size: 104px; line-height: .9; letter-spacing: -.025em; }
+.back h2 i { font-style: italic; font-weight: 400; color: var(--pink); }
+.back p { max-width: 46ch; color: var(--on-space-soft); font-size: 18px; }
+.ways { margin: 6px 0 0; display: grid; gap: 14px; }
+.ways div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 0 32px; align-items: baseline; padding-top: 14px; border-top: 1px solid rgba(250, 250, 250, .2); }
+.ways dt { font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--on-space-soft); }
+.ways dd { margin: 0; font-family: var(--disp); font-size: 34px; line-height: 1.1; overflow-wrap: anywhere; user-select: all; }
+.acts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.acts .pill { min-height: 46px; padding: 0 20px; font-size: .9375rem; }
+
+.back .more { font-size: 15px; padding-top: 16px; border-top: 1px solid rgba(250, 250, 250, .2); max-width: none; }
+.back .more a { color: var(--pink); font-weight: 600; text-underline-offset: 4px; }
+.bar { gap: 8px; }
+@media (max-width: 520px) { #where { visibility: hidden; } .bar .pill { padding: 0 11px; } }
+
+/* hero words, captions, chapter rail: cinematic mode only */
+.hud, #rail { display: none; }
+
+/* =========== cinematic mode =========== */
+.cine #act { padding: 0; }
+.cine .stage { height: 100vh; height: 100svh; overflow: hidden; perspective: 1500px; perspective-origin: 50% 46%; }
+.cine .cam { position: absolute; left: 0; top: 0; width: var(--W); transform-origin: 0 0; transform-style: preserve-3d; }
+.cine .sheet { margin: 0; transform-style: preserve-3d; }
+.cine .ply { -webkit-backface-visibility: hidden; backface-visibility: hidden; box-shadow: 0 calc(var(--lift, 0) * 26px) calc(var(--lift, 0) * 70px) rgba(0, 0, 0, calc(var(--lift, 0) * .55)); }
+.cine .back { position: absolute; inset: 0 0 auto 0; margin: 0; transform: rotateY(180deg); -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+.cine .tag { display: block; position: absolute; left: 0; bottom: 100%; padding-bottom: calc(8px * var(--inv, 1)); font: 600 calc(11px * var(--inv, 1)) var(--sc-font-text); letter-spacing: .2em; text-transform: uppercase; color: var(--on-space); white-space: nowrap; opacity: var(--tag, 0); pointer-events: none; }
+.cine .tag::before { content: ""; display: inline-block; width: calc(26px * var(--inv, 1)); height: calc(2px * var(--inv, 1)); background: var(--pink); margin-right: calc(10px * var(--inv, 1)); vertical-align: middle; }
+/* what waits for the camera: stamps land, the spine draws, bars grow */
+.cine .ply:not(.seen) .stamp { opacity: 0; transform: rotate(calc(var(--r, -6deg) - 24deg)) scale(1.9); }
+.cine .ply .stamp { transition: transform .5s cubic-bezier(.2, 1.5, .4, 1), opacity .2s; transition-delay: calc(var(--i, 0) * 90ms + 250ms); }
+.cine .ply:not(.seen) .xl::before { transform: scaleY(0); }
+.cine .xl::before { transition: transform 1.6s cubic-bezier(.2, .8, .2, 1) .2s; }
+.cine .ply:not(.seen) .lat i { transform: scaleX(0); }
+.cine .lat i { transition: transform 1.1s cubic-bezier(.2, .8, .2, 1) .5s; }
+.cine .ply:not(.seen) .seal { opacity: 0; transform: rotate(-40deg) scale(1.8); }
+.cine .seal { transition: transform .55s cubic-bezier(.2, 1.5, .4, 1) .4s, opacity .2s .4s; }
+
+.cine #hero-w { display: grid; }
+html:not(.cine) #act { height: auto !important; }
+html:not(.cine) .stage { position: static !important; height: auto !important; overflow: visible !important; }
+.cine #act { height: calc(var(--span, 12) * 100vh) !important; }
+.cine .hud { display: block; position: fixed; z-index: 5; pointer-events: none; }
+#hero-w { left: var(--gut); top: 50%; width: min(44vw, 620px); transform: translateY(-50%); gap: 18px; }
+#hero-w .k { font-size: .75rem; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--pink); }
+#hero-w .t { font-family: var(--disp); font-weight: 500; font-size: clamp(2.6rem, 6.4vw, 6.25rem); line-height: .9; letter-spacing: -.025em; }
+#hero-w .t i { font-weight: 400; color: var(--pink); }
+#hero-w .d { color: var(--on-space-soft); font-size: 1.0625rem; max-width: 38ch; }
+#hero-w .go { display: inline-flex; align-items: center; gap: 12px; font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; color: var(--on-space); }
+#hero-w .go::before { content: ""; width: 1px; height: 44px; background: linear-gradient(var(--pink), transparent); animation: drop 1.8s cubic-bezier(.6, 0, .3, 1) infinite; transform-origin: 50% 0; }
+@keyframes drop { 0% { transform: scaleY(0); } 55% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(1); opacity: 0; } }
+.cap { left: var(--gut); right: var(--gutr); bottom: calc(env(safe-area-inset-bottom, 0px) + 64px); text-align: center; font-family: var(--disp); font-size: clamp(1.5rem, 3.2vw, 2.75rem); line-height: 1.05; letter-spacing: -.01em; opacity: 0; }
+
+.cap::before { content: ""; position: absolute; z-index: -1; inset: -70px -16px -90px; background: linear-gradient(transparent, rgba(9, 9, 11, .9) 42%); }
+.cap i { color: var(--pink); font-weight: 400; }
+.cap small { display: block; margin-top: 10px; font: 400 .9375rem var(--sc-font-text); letter-spacing: 0; color: var(--on-space-soft); }
+
+.cine #rail { display: flex; position: fixed; z-index: 8; left: var(--gut); right: var(--gutr); bottom: calc(env(safe-area-inset-bottom, 0px) + 14px); gap: 6px; }
+#rail button { flex: 1 1 0; min-width: 0; min-height: 32px; padding: 0; border: 0; background: none; color: var(--on-space-soft); font: 500 .6875rem var(--sc-font-text); letter-spacing: .12em; text-transform: uppercase; text-align: left; cursor: pointer; display: grid; gap: 7px; align-content: end; }
+#rail button::after { content: ""; height: 2px; background: linear-gradient(90deg, var(--pink) calc(var(--f, 0) * 100%), rgba(250, 250, 250, .22) 0); }
+#rail button span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: color .2s; }
+#rail button.on span, #rail button:hover span { color: var(--on-space); }
+
+/* ---------- narrow sheet ---------- */
+@media (max-width: 860px) {
+  .sheet { --pad: 20px; }
+  .ply { padding: 30px var(--pad); }
+  .cols { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .cols > .kicker { padding-top: 0; }
+  #p-id { grid-template-columns: minmax(0, 1fr) 96px; gap: 0 10px; min-height: 0; padding-top: 24px; }
+  .id-main { padding: 22px 0 26px; gap: 14px; }
+  .id-main h1 { font-size: clamp(38px, 12.4vw, 60px); }
+  .role { font-size: 15px; }
+  .reach { font-size: 14px; flex-direction: column; gap: 4px; }
+  .stand { width: 96px; margin-left: -48px; }
+  .lede { font-size: 25px; }
+  .prof { grid-template-columns: minmax(0, 1fr); }
+  .xl::before { left: 0; }
+  .x { grid-template-columns: minmax(0, 1fr) 44px; gap: 2px 12px; padding: 0 0 22px 16px; }
+  .when { grid-column: 1 / -1; text-align: left; padding: 0; }
+  .x h3 { font-size: 21px; }
+  .stamp { width: 44px; height: 44px; }
+  .stamp.inkst { font-size: 8px; }
+  .edu li { grid-template-columns: 44px minmax(0, 1fr); }
+  .fig8 { font-size: 44px; margin-left: 12px; }
+  .pj { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .p h3 { font-size: 26px; }
+  .sk { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .sk p { font-size: 19px; }
+  .cert { grid-template-columns: 76px minmax(0, 1fr); gap: 16px; }
+  .seal { width: 76px; height: 76px; }
+  .cert h3 { font-size: 23px; }
+  .back { padding: 36px var(--pad); gap: 16px; }
+  .back h2 { font-size: clamp(52px, 17vw, 84px); }
+  .back p { font-size: 16px; }
+  .ways div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .ways dd { font-size: 24px; }
+  #hero-w { top: calc(env(safe-area-inset-top, 0px) + 66px); width: auto; right: var(--gutr); transform: none; gap: 10px; }
+  #hero-w .d { font-size: .9375rem; }
+  #hero-w .go::before { height: 26px; }
+  #rail button span { display: none; }
+  #rail button { min-height: 24px; }
+  .cap { bottom: calc(env(safe-area-inset-bottom, 0px) + 48px); }
+  #where { text-align: left; }
+  .bar b { display: none; }
+}
+@media (max-height: 520px) and (min-width: 560px) {
+  #hero-w { gap: 8px; width: 46vw; }
+  #hero-w .t { font-size: 2.4rem; }
+  #hero-w .d { font-size: .8125rem; }
+  #hero-w .go::before { height: 18px; }
+  .cap { font-size: 1.25rem; bottom: 40px; }
+  .cap small { display: none; }
+}
+</style>
+
+<div id="light" aria-hidden="true"></div>
+<canvas id="dust" aria-hidden="true"></canvas>
+
+<header class="bar">
+  <b>R. A. Mahesworo</b>
+  <span id="where" aria-hidden="true">Curriculum vitae</span>
+  <button class="pill" id="mode" type="button" aria-pressed="false">Plain view</button>
+  <a class="pill" href="{{PORTFOLIO_URL}}">Portfolio</a>
+  <a class="pill hot" id="tocontact" href="#contact">Contact</a>
+</header>
+
+<div class="hud" id="hero-w" aria-hidden="true">
+  <span class="k">Curriculum vitae · 2026</span>
+  <span class="t">A CV you can <i>take apart.</i></span>
+  <span class="d">Rayvan Alifarlo Mahesworo, Information Technology undergraduate at Telkom University. Everything on the sheet is real, and all of it is on one page.</span>
+  <span class="go">Scroll</span>
+</div>
+<div class="hud cap" id="cap-x" aria-hidden="true">Five sheets, <i>one CV.</i></div>
+<div class="hud cap" id="cap-a" aria-hidden="true">And back <i>together.</i><small>The whole CV at a glance. Use Plain view to read it as a normal page.</small></div>
+<div id="rail" aria-label="CV chapters"></div>
+
+<main>
+<section id="act" data-sc-act="pin" data-sc-span="12">
+  <div class="stage" data-sc-stage>
+    <div class="cam" id="cam">
+      <article class="sheet" id="sheet">
+
+        <section class="ply" id="p-id" data-name="Identity">
+          <span class="tag" aria-hidden="true">Identity</span>
+          <div class="mast"><span class="kicker">Curriculum vitae</span><span class="kicker">Updated November 2026</span></div>
+          <div class="id-main">
+            <h1>Rayvan Alifarlo <i>Mahesworo</i></h1>
+            <p class="role">Information Technology undergraduate at Telkom University, Bandung.</p>
+            <ul class="reach">
+              <li>rayvanalif30@gmail.com</li>
+              <li><a href="https://wa.me/6281283600627" rel="noopener">+62 812-8360-0627</a></li>
+              <li><a href="https://www.linkedin.com/in/rayvan-alifarlo-mahesworo-8ab34a39a" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://www.instagram.com/rayvanalif" rel="noopener">Instagram</a></li>
+            </ul>
+          </div>
+          <div class="slot"><img class="stand" id="stand" src="/*{{PHOTO}}*/" width="412" height="1069" alt="Rayvan Alifarlo Mahesworo, standing, in a dark batik shirt and glasses."></div>
+        </section>
+
+        <section class="ply" id="p-pro" data-name="Profile">
+          <span class="tag" aria-hidden="true">Profile</span>
+          <div class="cols">
+            <span class="kicker">Profile</span>
+            <div class="prof">
+              <div>
+                <p class="lede">I build web applications and network systems, and I run <em>the data behind campus events.</em></p>
+              </div>
+              <div>
+                <p class="body">I'm used to working in organizations, in teams, and under pressure. I enjoy committee work that sharpens both my soft and hard skills.</p>
+              </div>
+              <div style="grid-column:1/-1">
+                <span class="kicker">Education</span>
+                <ul class="edu" style="margin-top:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))">
+                  <li><span class="stamp" style="--r:-7deg;--i:0"><img src="/*{{LOGO_TELKOM}}*/" width="560" height="560" alt="Telkom University logo"></span><div><b>Telkom University</b><span>Bachelor's in Information Technology, Aug 2024 to present</span></div></li>
+                  <li><span class="stamp" style="--r:5deg;--i:1"><img src="/*{{LOGO_IC}}*/" width="560" height="560" alt="SMA Insan Cendekia logo"></span><div><b>SMA Insan Cendekia Boarding School Sentul</b><span>Senior high school, Apr 2021 to Jun 2024</span></div></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ply" id="p-exp" data-name="Experience">
+          <span class="tag" aria-hidden="true">Experience</span>
+          <div class="cols">
+            <span class="kicker">Experience<br>Organizations and committees</span>
+            <ol class="xl">
+              <li class="x"><span class="when">Mar 2026<br>to present</span><div><h3>Staff, Aspirations &amp; External Commission<span class="now">Now</span></h3><p class="org">KPM HMIT</p><ul><li>Collecting and analyzing feedback from Information Technology undergraduates.</li></ul></div><span class="stamp" style="--r:-8deg;--i:0"><img src="/*{{LOGO_KPM}}*/" width="560" height="560" alt="KPM HMIT logo"></span></li>
+              <li class="x"><span class="when">Mar 2026<br>to present</span><div><h3>Duty &amp; Evaluation Team<span class="now">Now</span></h3><p class="org">Proximity 2026, Information Technology cadre program</p><ul><li>Assigning tasks to cadre participants and assessing their work.</li><li>Serving as an expert witness at participants' graduation hearings.</li></ul></div><span class="stamp" style="--r:6deg;--i:1"><img src="/*{{LOGO_PROXIMITY}}*/" width="560" height="560" alt="Proximity 2026 logo"></span></li>
+              <li class="x"><span class="when">Oct 2025<br>to Jan 2026</span><div><h3>Staff Muda, Commission I</h3><p class="org">KPM HMIT</p><ul><li>Collecting and relaying student feedback, and responding to complaints and suggestions.</li><li>Running programs such as a podcast.</li></ul></div><span class="stamp" style="--r:-3deg;--i:2"><img src="/*{{LOGO_KPM}}*/" width="560" height="560" alt="KPM HMIT logo"></span></li>
+              <li class="x"><span class="when">Sep 2025<br>to Nov 2025</span><div><h3>Field Coordinator</h3><p class="org">Dewave, main event of UKM Embun</p><ul><li>Coordinating the committee and managing attendance before the event.</li><li>Securing and supervising the event on the day.</li></ul></div><span class="stamp inkst" style="--r:9deg;--i:3">UKM<br>Embun</span></li>
+              <li class="x"><span class="when">Jun 2025<br>to Sep 2025</span><div><span class="fig8" aria-hidden="true">8,000</span><h3>Evaluation Division</h3><p class="org">PKKMB Telkom University 2025, new student orientation</p><ul><li>Processed data for 8,000 committee members and new students.</li><li>Created assignments and plotted new students throughout the event.</li><li>Assessed committee performance, assignments, and attendance.</li></ul></div><span class="stamp" style="--r:-10deg;--i:4"><img src="/*{{LOGO_PKKMB}}*/" width="560" height="560" alt="PKKMB Telkom University 2025 logo"></span></li>
+              <li class="x"><span class="when">Nov 2023<br>to Jan 2024</span><div><h3>Core Secretary</h3><p class="org">Aesthetic, SMA Insan Cendekia annual event</p><ul><li>Drafted and archived letters, and recorded meeting minutes.</li><li>Managed competition participant and committee data.</li></ul></div><span class="stamp" style="--r:4deg;--i:5"><img src="/*{{LOGO_IC}}*/" width="560" height="560" alt="SMA Insan Cendekia logo"></span></li>
+              <li class="x"><span class="when">Feb 2023<br>to Feb 2024</span><div><h3>Vice Chair</h3><p class="org">MPS, SMA Insan Cendekia student representative council</p><ul><li>Supported the chair in directing divisions and setting policy.</li><li>Acted as the liaison between divisions.</li></ul></div><span class="stamp" style="--r:-6deg;--i:6"><img src="/*{{LOGO_MPS}}*/" width="560" height="560" alt="MPS SMA Insan Cendekia logo"></span></li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="ply" id="p-pj" data-name="Projects">
+          <span class="tag" aria-hidden="true">Projects</span>
+          <div class="cols">
+            <span class="kicker">Projects</span>
+            <div class="pj">
+              <article class="p">
+                <h3>Trans Tuc-Tuc</h3>
+                <p class="meta">Full-stack web developer · team of three</p>
+                <p>A campus transport web app to reduce congestion and dependence on parking space at Telkom University.</p>
+                <ul>
+                  <li>Express.js REST API for authentication, stop-by-stop schedules, vehicle data, and trip history, with bcrypt-hashed passwords.</li>
+                  <li>Interactive Leaflet.js map with simulated fleet tracking and arrival estimates.</li>
+                  <li>Admin dashboard for vehicles, schedules, and passenger statistics, deployed on Vercel.</li>
+                </ul>
+              </article>
+              <article class="p">
+                <h3>Client, proxy, and server on raw sockets</h3>
+                <p class="meta">Computer Networks · group project</p>
+                <p>A 3-tier system in Python with no HTTP framework. My part was <code>client.py</code> and the QoS measurement.</p>
+                <div class="lat">
+                  <div><span>&gt;1,200 ms</span><i style="--w:100%"></i></div>
+                  <div><span>~31 ms</span><i style="--w:2.6%"></i></div>
+                  <small>A repeat request without cache, then with a local cache hit. Bars are to scale.</small>
+                </div>
+                <ul>
+                  <li>Multithreading for concurrent clients, HIT and MISS caching, and 404, 502, and 504 handling.</li>
+                  <li>0% packet loss on an isolated UDP channel, and TCP retransmission validated under heavy load with Wireshark.</li>
+                </ul>
+              </article>
+              <article class="p s">
+                <h3>EduGrade</h3>
+                <p class="meta">Object-Oriented Programming · Java Spring Boot</p>
+                <p>I worked on JWT authentication, role-based access control, and user management.</p>
+              </article>
+              <article class="p s">
+                <h3>SewaKit</h3>
+                <p class="meta">Web Programming · team of six</p>
+                <p>A student equipment rental app. I owned Catalog and Search, and Handover and Return, end to end.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="ply" id="p-sk" data-name="Skills">
+          <span class="tag" aria-hidden="true">Skills and certification</span>
+          <div class="cols">
+            <span class="kicker">Skills</span>
+            <div>
+              <div class="sk">
+                <div><span class="kicker">Backend</span><p>Java, Spring Boot, Express.js, REST API, JWT, RBAC</p></div>
+                <div><span class="kicker">Networking</span><p>Python, socket programming, multithreading, Wireshark</p></div>
+                <div><span class="kicker">Data and web</span><p>SQL, MariaDB, HTML, CSS, Leaflet.js, Vercel</p></div>
+              </div>
+              <div class="cert">
+                <svg class="seal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="ring" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0"/></defs><circle cx="60" cy="60" r="57" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="60" cy="60" r="34" fill="none" stroke="currentColor" stroke-width="1.5"/><text><textPath href="#ring">REGISTERED COPYRIGHT · DJKI · INDONESIA ·</textPath></text><path d="M60 38l6.2 13.6 14.8 1.6-11 10 3.1 14.6L60 70.3l-13.1 7.5L50 63.2l-11-10 14.8-1.6z" fill="currentColor"/></svg>
+                <div>
+                  <span class="kicker">Certification</span>
+                  <h3>Copyright registration, Trans Tuc-Tuc</h3>
+                  <p>Recorded as a Computer Program work with DJKI, Indonesia's intellectual property office, under Registration No. 001336376. The copyright holder is Universitas Telkom.</p>
+                </div>
+              </div>
+              <p class="colophon">Set in Libre Bodoni and Public Sans. The other side of this sheet has the contact details.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="back" id="contact">
+          <span class="kicker" style="color:var(--on-space-soft)">The other side</span>
+          <h2>Let's <i>talk.</i></h2>
+          <p>For internships, project collaborations, or committee work, this is where to reach me.</p>
+          <dl class="ways">
+            <div><dt>Email</dt><dd id="mail">rayvanalif30@gmail.com</dd></div>
+            <div><dt>WhatsApp</dt><dd>+62 812-8360-0627</dd></div>
+          </dl>
+          <div class="acts">
+            <a class="pill hot" href="https://wa.me/6281283600627" rel="noopener">Chat on WhatsApp</a>
+            <button class="pill" id="copy" type="button">Copy email</button>
+            <a class="pill" href="https://www.linkedin.com/in/rayvan-alifarlo-mahesworo-8ab34a39a" rel="noopener">LinkedIn</a>
+            <a class="pill" href="https://www.instagram.com/rayvanalif" rel="noopener">Instagram</a>
+          </div>
+          <p class="more">Want the projects in motion? <a href="{{PORTFOLIO_URL}}">See the portfolio</a></p>
+        </section>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<script>/*{{ENGINE_JS}}*/</script>
+<script>
+(function () {
+  var doc = document.documentElement, $ = function (s) { return document.querySelector(s); }, $$ = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var clamp = function (v, a, b) { return v < a ? a : v > b ? b : v; };
+  var ease = function (t) { return t * t * t * (t * (t * 6 - 15) + 10); };
+  doc.classList.add('js'); doc.lang = 'en';
+
+  var act = $('#act'), cam = $('#cam'), sheet = $('#sheet'), stand = $('#stand'), back = $('#contact');
+  var plies = $$('.ply'), N = plies.length, modeBtn = $('#mode'), where = $('#where'), rail = $('#rail');
+  var heroW = $('#hero-w'), capX = $('#cap-x'), capA = $('#cap-a'), light = $('#light');
+  var cine = false, segs = [], total = 1, stops = [], railBtns = [];
+  var vw = 0, vh = 0, W = 0, SH = 0, D = 0;
+
+  $('#copy').addEventListener('click', function () {
+    var b = this, m = $('#mail').textContent;
+    var done = function (t) { b.textContent = t; setTimeout(function () { b.textContent = 'Copy email'; }, 1800); };
+    var pick = function () { var r = document.createRange(); r.selectNodeContents($('#mail')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); done('Press Ctrl+C'); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(m).then(function () { done('Copied'); }, pick); else pick();
+  });
+
+  /* ---------- the camera path ---------- */
+  function pose(o) { var p = { cx: W / 2, cy: SH / 2, s: 1, rx: 0, ry: 0, rz: 0, e: 0, f: (N - 1) / 2, foc: 0, flip: 0, ox: 0, oy: 0 }; for (var k in o) p[k] = o[k]; return p; }
+  function build() {
+    vw = innerWidth; vh = innerHeight; W = sheet.offsetWidth; SH = sheet.offsetHeight; D = W * .17;
+    var narrow = vw < 860, land = vh < 520 && vw >= 560, bar = 30;
+    var fit = Math.min(vh * .62 / SH, vw * .5 / W);
+    var H, X, A;
+    if (narrow && !land) {
+      /* the sheet is a long strip on a phone: show it receding, like an opening crawl */
+      var s0 = .64 * vw / W, top = vh * .34 / s0;
+      H = pose({ s: s0, cy: top, rx: 58, rz: -14, oy: vh * .27 });
+      X = pose({ s: s0 * .86, cy: top * 1.5, rx: 62, rz: -24, e: 1, f: 1, oy: vh * .16 });
+      A = pose({ s: s0 * .8, cy: top * 1.6, rx: 56, rz: 12, oy: vh * .02 });
+    } else {
+      var sh = Math.min(vh * 1.12 / SH, .46 * vw / W);
+      H = pose({ s: sh, rx: 56, rz: -24, ox: vw * .21, oy: vh * .03 });
+      X = pose({ s: sh * .86, rx: 62, rz: -34, e: 1, ox: vw * .04, oy: vh * .02 });
+      A = pose({ s: fit, rx: 0, ry: -20, oy: -vh * .07 });
+    }
+    var sF = Math.min(1.16, (vw - 32) / W, land ? .9 : 9), viewH = (vh - bar - 96) / sF;
+    segs = []; stops = [];
+    var add = function (a, b, len, name, swing) { segs.push({ a: a, b: b, len: len, name: name, swing: swing || 0 }); };
+    var mark = function (name) { stops.push({ name: name, at: segs.reduce(function (t, s) { return t + s.len; }, 0) }); };
+    mark('Overview'); add(H, H, .3, 'Curriculum vitae');
+    add(H, X, 1, 'Taken apart'); add(X, X, .45, 'Taken apart');
+    var prev = X;
+    plies.forEach(function (pl, i) {
+      var t = pl.offsetTop, h = pl.offsetHeight, c0, c1;
+      if (h <= viewH) c0 = c1 = t + h / 2; else { c0 = t + viewH / 2 - 10 / sF; c1 = t + h - viewH / 2 + 10 / sF; }
+      var F0 = pose({ s: sF, cy: c0, e: 1, f: i, foc: 1, oy: bar * .5 - 24 }), F1 = pose({ s: sF, cy: c1, e: 1, f: i, foc: 1, oy: bar * .5 - 24 });
+      add(prev, F0, i ? .75 : 1, pl.dataset.name, (i % 2 ? 1 : -1) * 16);
+      mark(pl.dataset.name);
+      add(F0, F1, .45 + Math.abs(c1 - c0) * sF / vh * .95, pl.dataset.name);
+      prev = F1;
+    });
+    add(prev, A, 1.1, 'Whole CV'); mark('Whole CV'); add(A, A, .55, 'Whole CV');
+    var bh = back.offsetHeight, sB = Math.min(1, (vw - 32) / W, (vh - bar - 70) / bh);
+    var B = pose({ s: sB, cy: bh / 2, flip: 1, oy: bar * .5 - 10 });
+    add(A, B, 1, 'Contact', 0); mark('Contact'); add(B, B, .8, 'Contact');
+    total = segs.reduce(function (t, s) { return t + s.len; }, 0);
+    sheet.style.setProperty('--inv', (1 / X.s).toFixed(3));
+  }
+
+  var mx = 0, my = 0, pmx = 0, pmy = 0, cur = 0, last = -1, lastName = '', t0 = 0;
+  function frame(P, ts) {
+    var acc = 0, sg = segs[segs.length - 1], t = 1;
+    for (var i = 0; i < segs.length; i++) { if (P <= acc + segs[i].len || i === segs.length - 1) { sg = segs[i]; t = clamp((P - acc) / sg.len, 0, 1); break; } acc += segs[i].len; }
+    var k = sg.a === sg.b ? t : ease(t), a = sg.a, b = sg.b, L = function (n) { return a[n] + (b[n] - a[n]) * k; };
+    var s = L('s'), rx = L('rx'), ry = L('ry') + Math.sin(Math.PI * k) * sg.swing, rz = L('rz'), e = L('e'), f = L('f'), foc = L('foc'), flip = L('flip');
+    var arc = sg.a === sg.b ? 0 : Math.sin(Math.PI * k);
+    s *= 1 - arc * .1 * (a.foc && b.foc ? 1 : 0);
+    /* the sheet breathes a little and leans toward the pointer; less so while reading */
+    var calm = 1 - foc * .72;
+    rx += (Math.sin(ts * .6) * 1.6 - pmy * 5) * calm; ry += (Math.cos(ts * .45) * 2.2 + pmx * 7) * calm;
+    var yaw = ry + flip * 180;
+    cam.style.transform = 'translate3d(' + (vw / 2 + L('ox')).toFixed(1) + 'px,' + (vh / 2 + L('oy')).toFixed(1) + 'px,0) scale(' + s.toFixed(4) + ') rotateX(' + rx.toFixed(2) + 'deg) rotateY(' + yaw.toFixed(2) + 'deg) rotateZ(' + rz.toFixed(2) + 'deg) translate3d(' + (-L('cx')).toFixed(1) + 'px,' + (-L('cy')).toFixed(1) + 'px,0)';
+    var fi = Math.round(f);
+    plies.forEach(function (pl, i) {
+      var z = e * (i - f) * D, o = 1;
+      if (foc > 0) o = 1 - foc * (z > 0 ? clamp(z / (D * .75), 0, 1) : .62 * clamp(-z / (D * 1.4), 0, 1));
+      pl.style.transform = 'translate3d(0,0,' + z.toFixed(1) + 'px)';
+      pl.style.opacity = o.toFixed(3);
+      pl.style.pointerEvents = o < .5 ? 'none' : '';
+      pl.style.setProperty('--lift', (e * (1 - foc * .5)).toFixed(3));
+      pl.style.setProperty('--tag', (e * (1 - foc)).toFixed(3));
+      if (foc > .85 && i === fi && !pl.classList.contains('seen')) pl.classList.add('seen');
+    });
+    /* the portrait is a pop-up: it always stands facing you, and lies flat when the sheet does */
+    var up = clamp(Math.abs(rx) / 50, 0, 1) * (1 - flip);
+    var st = clamp((Math.abs(rx) - 6) / 18, 0, 1) * (1 - flip);
+    stand.style.transform = 'translateZ(1px) rotateZ(' + (-rz * st).toFixed(2) + 'deg) rotateY(' + (-ry * st).toFixed(2) + 'deg) rotateX(' + (-rx * st).toFixed(2) + 'deg) scale(' + (1 + up * (vw < 860 ? .35 : 1.5)).toFixed(3) + ')';
+    stand.style.opacity = flip > .5 ? 0 : 1;
+
+    var hp = sg === segs[0] ? 0 : sg === segs[1] ? t : 1;
+    heroW.style.opacity = (1 - clamp(hp * 2.4, 0, 1)).toFixed(3);
+    heroW.style.transform = (vw < 860 ? '' : 'translateY(-50%) ') + 'translate3d(' + (-hp * 60).toFixed(1) + 'px,0,0)';
+    var cx = (sg === segs[1] ? clamp(t * 2 - 1, 0, 1) : sg === segs[2] ? 1 : sg === segs[3] ? 1 - clamp(t * 3, 0, 1) : 0);
+    capX.style.opacity = cx.toFixed(3);
+    var ai = segs.length - 4, ca = sg === segs[ai] ? clamp(t * 2.5 - 1.5, 0, 1) : sg === segs[ai + 1] ? 1 : sg === segs[ai + 2] ? 1 - clamp(t * 3, 0, 1) : 0;
+    capA.style.opacity = ca.toFixed(3);
+    light.style.setProperty('--lx', (72 - P / total * 44 + pmx * 6).toFixed(1) + '%');
+    light.style.setProperty('--ly', (38 + Math.sin(P / total * 6.283) * 16).toFixed(1) + '%');
+    var name = sg.a === sg.b || k > .5 ? sg.name : (segs[i - 1] || sg).name;
+    if (name !== lastName) { lastName = name; where.textContent = name; }
+    railBtns.forEach(function (bt, j) {
+      var st = stops[j].at, en = j + 1 < stops.length ? stops[j + 1].at : total;
+      bt.style.setProperty('--f', clamp((P - st) / (en - st), 0, 1).toFixed(3));
+      bt.classList.toggle('on', P >= st - .01 && P < en);
+    });
+  }
+
+  function progress() { var r = act.getBoundingClientRect(); return clamp(-r.top / Math.max(act.offsetHeight - vh, 1), 0, 1) * total; }
+  function tick(now) {
+    requestAnimationFrame(tick);
+    if (!cine) return;
+    var target = progress(); cur += (target - cur) * .13; if (Math.abs(target - cur) < .0004) cur = target;
+    pmx += (mx - pmx) * .06; pmy += (my - pmy) * .06;
+    frame(cur, now * .001); dust(now * .001);
+  }
+  addEventListener('pointermove', function (e) { if (e.pointerType === 'mouse') { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; } }, { passive: true });
+
+  /* ---------- dust in the light ---------- */
+  var dc = $('#dust'), dx = dc.getContext('2d'), motes = [];
+  for (var q = 0; q < 70; q++) motes.push({ x: Math.random(), y: Math.random(), z: .25 + Math.random() * .75, p: Math.random() * 6.28 });
+  function dust(ts) {
+    var w = dc.width, h = dc.height; dx.clearRect(0, 0, w, h);
+    motes.forEach(function (m) {
+      var x = ((m.x + ts * .006 * m.z + Math.sin(ts * .2 + m.p) * .01 - pmx * .03 * m.z) % 1 + 1) % 1 * w;
+      var y = ((m.y - cur / total * .9 * m.z - ts * .004 * m.z) % 1 + 1) % 1 * h;
+      var r = (1 - m.z) * 7 + 1.2;
+      dx.globalAlpha = (.05 + .16 * m.z) * (.6 + .4 * Math.sin(ts * .7 + m.p));
+      dx.fillStyle = m.p > 4.6 ? '#ec4899' : '#fafafa';
+      dx.beginPath(); dx.arc(x, y, r, 0, 6.3); dx.fill();
+    });
+    dx.globalAlpha = 1;
+  }
+
+  /* ---------- modes ---------- */
+  function setRail() {
+    rail.innerHTML = ''; railBtns = stops.map(function (st) {
+      var b = document.createElement('button'); b.type = 'button'; b.innerHTML = '<span>' + st.name + '</span>'; b.setAttribute('aria-label', 'Go to ' + st.name);
+      b.addEventListener('click', function () { go(st.at + .32); }); rail.appendChild(b); return b;
+    });
+  }
+  function go(at) { var top = act.getBoundingClientRect().top + scrollY; scrollTo({ top: top + at / total * (act.offsetHeight - vh), behavior: reduce ? 'auto' : 'smooth' }); }
+  function enter() {
+    cine = true; doc.classList.add('cine'); modeBtn.textContent = 'Plain view'; modeBtn.setAttribute('aria-pressed', 'false');
+    build(); act.style.setProperty('--span', (total + 1).toFixed(3)); setRail();
+    dc.width = innerWidth; dc.height = innerHeight; cur = progress(); lastName = '';
+  }
+  function leave() {
+    cine = false; doc.classList.remove('cine'); modeBtn.textContent = 'Cinematic view'; modeBtn.setAttribute('aria-pressed', 'true');
+    cam.style.transform = ''; stand.style.transform = ''; stand.style.opacity = '';
+    plies.forEach(function (pl) { pl.style.transform = pl.style.opacity = pl.style.pointerEvents = ''; pl.classList.add('seen'); });
+    where.textContent = 'Curriculum vitae';
+  }
+  modeBtn.addEventListener('click', function () { if (cine) leave(); else enter(); scrollTo(0, 0); });
+  $('#tocontact').addEventListener('click', function (e) { if (cine) { e.preventDefault(); go(total - .3); } });
+
+  act.setAttribute('data-sc-span', '12');
+  ScrollCraft.mount(document.body);
+  var rt = 0, lw = innerWidth, lh = innerHeight;
+  addEventListener('resize', function () {
+    if (innerWidth === lw && Math.abs(innerHeight - lh) < 120) return;
+    lw = innerWidth; lh = innerHeight; clearTimeout(rt);
+    rt = setTimeout(function () { if (cine) { var keep = cur / total; build(); act.style.setProperty('--span', (total + 1).toFixed(3)); setRail(); dc.width = innerWidth; dc.height = innerHeight; lastName = ''; } }, 160);
+  });
+  var start = function () { if (reduce) leave(); else enter(); requestAnimationFrame(tick); };
+  var ready = Promise.all([document.fonts ? document.fonts.ready : 0, stand.decode ? stand.decode().catch(function () {}) : 0]);
+  Promise.race([ready, new Promise(function (r) { setTimeout(r, 1500); })]).then(start, start);
+})();
+</script>
