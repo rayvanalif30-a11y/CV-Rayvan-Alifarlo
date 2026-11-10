@@ -3,7 +3,7 @@ Usage: python src/build.py"""
 import base64, pathlib
 
 # Address of the portfolio site, used by the "Portfolio" buttons.
-PORTFOLIO_URL = "https://github.com/rayvanalif30-a11y/Portofolio-Rayvan-Alifarlo"
+PORTFOLIO_URL = "https://rayvan-alifarlo.netlify.app/"
 
 R = pathlib.Path(__file__).parent
 b64 = lambda p: base64.b64encode((R / p).read_bytes()).decode()
